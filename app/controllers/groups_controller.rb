@@ -6,10 +6,12 @@ class GroupsController < ApplicationController
     end
 
     def update_project
-        byebug
-        
         redirect_to project_path(@project)
     end
 
+    def workers
+        @project = Project.find(params[:id])
+        render "add_workers"
+    end 
 
 end

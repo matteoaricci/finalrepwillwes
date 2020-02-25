@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :workers
   get '/groups/:id/workers', to: "groups#add_workers", as: "add_workers"
   post '/groups', to: "groups#update_project", as: "update_project"
+  get '/projects/:id/add_workers', to: 'groups#workers'
 end

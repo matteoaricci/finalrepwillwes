@@ -1,2 +1,7 @@
 <h1>Add Workers to <%=@project.name%></h1>
 
+<%= form_for @project, :url => add_workers_path do |p| %>
+    <%= p.collection_check_boxes(:worker_ids, Worker.all, :id, :name) %>
+    <%= p.submit %>
+<% end %>
+
