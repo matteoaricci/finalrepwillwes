@@ -1,0 +1,11 @@
+<h1>All the Workers!</h1>
+
+<ul>
+<% @workers.each do |work| %>
+    <li>
+        <%= link_to work.name, worker_path(work) %>
+    </li>
+<% end %>
+</ul>
+
+<%= link_to 'New Worker Form',new_worker_path %>

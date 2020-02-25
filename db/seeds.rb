@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+matteo = Worker.create(name: "Matteo", age: 23)
+will = Worker.create(name: "Will", age: 26)
+wesley = Worker.create(name: "Wes", age: 23)
+
+euler = Project.create(name: "Euler", details: "Interview Prep")
+blogs = Project.create(name: "Blogs", details: "Making Some Blogs")
