@@ -8,8 +8,8 @@
 <% end %>
 </ul>
 
-<%= render "form_add_workers" %>
 
+<%= link_to 'Add Peoples', add_workers_path(@project) %>
 <%= link_to 'Go Home', projects_path %>
 <%= link_to 'Edit This Project', edit_project_path(@project) %>
 <%= link_to 'Destroy This Project', project_path(@project), :method => 'delete' %> 

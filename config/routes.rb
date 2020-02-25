@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :groups
+  resources :groups, only: [:index]
   resources :projects
   resources :workers
-  # delete '/projects/:id/destroy', to: "project#destroy", as: "destroy_project" 
-  
+  get '/groups/:id/workers', to: "groups#add_workers", as: "add_workers"
+  post '/groups', to: "groups#update_project", as: "update_project"
 end
