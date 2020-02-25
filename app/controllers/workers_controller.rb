@@ -29,6 +29,12 @@ class WorkersController < ApplicationController
         redirect_to worker_path(@worker)
     end
 
+    def destroy
+        @worker = Worker.find(params[:id])
+        @worker.destroy
+        redirect_to workers_path 
+    end 
+
     private
 
     def worker_params

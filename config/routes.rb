@@ -2,5 +2,6 @@ Rails.application.routes.draw do
   resources :groups
   resources :projects
   resources :workers
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # delete '/projects/:id/destroy', to: "project#destroy", as: "destroy_project" 
+  
 end
