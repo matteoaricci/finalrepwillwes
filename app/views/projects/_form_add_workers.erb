@@ -1,0 +1,7 @@
+<%= form_for @project do |f| %> 
+    <% Worker.all.each do |w| %>
+
+    <%= f.select %> <%= w.name %> 
+    <% end %>
+
+<% end %> 

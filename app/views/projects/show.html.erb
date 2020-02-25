@@ -2,6 +2,14 @@
 
 <h3><%= @project.details %></h3>
 
+<ul>
+<% @project.groups.each do |g| %>
+    <li><%= g.type %>: <%= g.worker.name %></li>
+<% end %>
+</ul>
+
+<%= render "form_add_workers" %>
+
 <%= link_to 'Go Home', projects_path %>
 <%= link_to 'Edit This Project', edit_project_path(@project) %>
 <%= link_to 'Destroy This Project', project_path(@project), :method => 'delete' %> 
